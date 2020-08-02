@@ -1,0 +1,10 @@
+age_group
+category
+quantity
+offer
+brand
+product
+current_price
+previous_price
+user
+history

@@ -1,0 +1,102 @@
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Login-Reg. Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Login and Registration Form for DBMS project" />
+        <meta name="keywords" content="html5, css3, login, Registration, form, switch, animation, pseudo-class" />
+        <meta name="author" content="Manav, Bhumiti, Mansi" />
+        <link rel="shortcut iAdvisorcon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/login_reg_style.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+        <script src="js/login_reg.js"> </script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div style="float: left; width: 50%;" id="project_name">
+                    <h1 style="float: left; color: green; margin-top: 5px;">Price</h2> &nbsp; <h1 style="float: left; margin-top: 5px;">-</h1> <h1 style="float: left; color: orangered; margin-top: 5px;">Tracker</h3>
+                </div>
+                <div id="tag_line" style="float: right; width: 50%; text-align: right;">
+                    <h3 style="margin-top: 0px; margin-bottom: 1px;"> <b>Learn Comparing</b></h3>
+                    <h5 style="font-family: 'Segoe UI', Arial, sans-serif; margin-top: 1px;"><i>Collaborative project by Manav, Bhumiti and Mansi</i></h5>
+                </div>
+            </header>
+            <br>
+            <br>
+            <br>
+            <section>				
+                <div id="container_demo" >
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form action="mysuperscript.php" id="login_form" autocomplete="on" method="POST" onsubmit=checkLoginForm(this);> 
+                                <h1>Log-In</h1> 
+                                <p>
+                                    <label for="username" class="uname" data-icon="u" > Username </label>
+                                    <input id="username" name="username" type="text" placeholder="my_username"title="Username must not be blank and contain only letters, numbers and underscores." type="text" required pattern="\w+"/>
+                                </p>
+                                <p>
+                                    <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                                    <input id="password" name="password" required type="password" placeholder="eg. X8df!90EO" title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" />
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" name="pswdtogglebox1" onclick="toggle_password_log()" value="Show Password">
+                                    <label> Show Password</label>
+                                </p>
+                                
+                                <p class="login button"> 
+                                    <input type="submit" value="Log-In" name = "submit-login"/> 
+                                </p>
+                                
+                                <p class="change_link">
+									Not a member yet ?
+									<a href="#toregister" class="to_register">Register</a>
+                                </p>
+                                <p id="msg"> </p>
+                            </form>
+                            
+                        </div>
+
+                        <div id="register" class="animate form">
+                            <form  action="mysuperscript.php" autocomplete="on" method="POST" onsubmit=checkSignUpForm(this);> 
+                                <h1> Sign up </h1> 
+                                <p> 
+                                    <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
+                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="username_690" title="Username must not be blank and contain only letters, numbers and underscores." pattern="\w+"/>
+                                </p>
+                                <p> 
+                                    <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
+                                    <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+                                    <input id="passwordsignup" name="pswd1" required="required" type="password" placeholder="eg. X8df!90EO" title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? this.title : '');
+                                    if(this.checkValidity()) form.pwd2.pattern = RegExp.escape(this.value);" />
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+                                    <input id="passwordsignup_confirm" name="pswd2" required="required" type="password" placeholder="eg. X8df!90EO" title="Password must match the above entered password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange = "this.setCustomValidity(this.validity.patternMismatch ? this.title : '');"/>
+                                </p>
+                                <p>
+                                    <input type="checkbox" name="pswdtogglebox2" onclick="toggle_password_reg()" value="Show Password">
+                                    <label> Show Password</label>
+                                </p>
+                                <p class="signin button"> 
+									<input type="submit" value="Register" name = "submit-reg"/> 
+								</p>
+                                <p class="change_link">  
+									Already a member ?
+									<a href="#tologin" class="to_register"> Log-In </a>
+								</p>
+                            </form>
+                        </div>	
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>

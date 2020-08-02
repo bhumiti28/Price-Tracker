@@ -1,0 +1,43 @@
+#inputBox {
+    border: 1px solid #818181;
+    border-radius: 4px;
+    background-clip: padding-box;
+    background-color: #FFF;
+    box-shadow: 0 0 7px 1px #fff, inset 0 0 10px #d2d2d2;
+    color: 0 0 7px 1px #fff, inset 0 0 10px #d2d2d2;
+    width: 400px;
+    height: 60px;
+    line-height: 55px;
+    font-size: 24px;
+    color: #999;
+    padding: 0 6px;
+}
+
+#search_submit {
+    display: inline-block;
+    height: 60px;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    padding: 0 8px;
+    border: 1px solid #3d3b3b;
+    border-radius: 4px;
+    background-clip: padding;
+    background-color: #444;
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.67);
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.vertical-center { 
+    margin: 0; 
+    position: relative; 
+    top: 50%; 
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
